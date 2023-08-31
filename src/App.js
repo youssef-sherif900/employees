@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+
 import './App.css';
+import NavigationBar from './components/NavigationBar';
+import SideBar from './components/SideBar';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Userspage from './components/Userspage';
+
 
 function App() {
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        light: '#757ce8',
+        main: '#2764ac',
+        dark: '#002884',
+        contrastText: '#fff',
+      },
+      secondary: {
+        light: '#27b40c',
+        main: '#27b40c',
+        dark: '#ba000d',
+        contrastText: '#000',
+      },
+    },
+  });
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+  <div className='flex m-0 p-0 '>
+  <SideBar/>
+  <div className='w-full relative overflow-hidden'>
+  <NavigationBar/> 
+  <Userspage/>
+  </div>
+   
+  
+   
+     </div>
+</ThemeProvider>
+  
   );
 }
 
