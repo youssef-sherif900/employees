@@ -3,6 +3,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Badge from '@mui/material/Badge';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import Button from '@mui/material/Button';
+import  Avatar  from '@mui/material/Avatar';
 
 function NavigationBar() {
   return (
@@ -30,6 +31,7 @@ function NavigationBar() {
         </Badge>
      </div>
      <div className='flex items-center'>
+     <Avatar sx={{scale:"0.75", marginRight:1}} />
      <p>Ahmed Khaled</p>
      <KeyboardArrowDownIcon />
      </div>
